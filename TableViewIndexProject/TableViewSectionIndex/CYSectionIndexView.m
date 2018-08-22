@@ -297,6 +297,9 @@
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
      [self hidenCalloutView];
+     if (self.delegate && [self.delegate respondsToSelector:@selector(sectionIndexView:didEndSelectSection:)]) {
+          [self.delegate sectionIndexView:self didSelectSection:self.selectIndex];
+     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

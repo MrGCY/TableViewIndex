@@ -30,7 +30,9 @@
 //点击了某个索引的回调
 - (void)sectionIndexView:(CYSectionIndexView *)sectionIndexView
         didSelectSection:(NSInteger)section;
-
+//结束选中
+-(void)sectionIndexView:(CYSectionIndexView *)sectionIndexView
+       didEndSelectSection:(NSInteger)section;
 @end
 
 typedef NS_ENUM(NSInteger,CYCalloutViewType) {
