@@ -54,6 +54,8 @@ typedef NS_ENUM(NSInteger,CYCalloutViewType) {
 - (void)registerNib:(nullable UINib *)nib forSectionIndexCellReuseIdentifier:(NSString *)identifier;
 - (void)registerClass:(nullable Class)sectionIndexCellClass forSectionIndexCellReuseIdentifier:(NSString *)identifier;
 - (nullable __kindof CYSectionIndexViewCell *)dequeueSectionIndexCellWithReuseIdentifier:(NSString *)identifier;
+//更新当前状态 只有在微信和普通模式下可用
+-(void)uploadSectionIndexStatusWithCurrentIndex:(NSInteger)currentIndex;
 //加载
 -(void)reloadItems;
 @end

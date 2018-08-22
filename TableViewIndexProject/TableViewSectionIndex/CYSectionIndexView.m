@@ -298,7 +298,7 @@
 {
      [self hidenCalloutView];
      if (self.delegate && [self.delegate respondsToSelector:@selector(sectionIndexView:didEndSelectSection:)]) {
-          [self.delegate sectionIndexView:self didSelectSection:self.selectIndex];
+          [self.delegate sectionIndexView:self didEndSelectSection:self.selectIndex];
      }
 }
 
