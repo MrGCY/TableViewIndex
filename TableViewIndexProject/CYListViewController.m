@@ -167,7 +167,7 @@
 }
 #pragma mark-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-     if (scrollView == self.tableView) {
+     if (scrollView == self.tableView && !self.sectionIndexView.isTouch) {
           NSArray <UITableViewCell *> *cellArray = [self.tableView  visibleCells];
           //cell的section的最小值
           long cellSectionMINCount = LONG_MAX;
@@ -178,7 +178,7 @@
                     cellSectionMINCount = cellSection;
                }
           }
-          if (!self.sectionIndexView.isTouch) {
+          if (cellSectionMINCount < self.sections.count) {
                [self.sectionIndexView uploadSectionIndexStatusWithCurrentIndex:cellSectionMINCount];
           }
      }
