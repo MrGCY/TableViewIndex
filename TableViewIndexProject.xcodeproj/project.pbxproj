@@ -21,6 +21,10 @@
 		410D46B3212BFD9D00531C29 /* CYCustomSectionIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46B1212BFD9D00531C29 /* CYCustomSectionIndexCell.xib */; };
 		410D46BC212D033000531C29 /* index_partner_view_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D46BA212D033000531C29 /* index_partner_view_bg@3x.png */; };
 		410D46BD212D033000531C29 /* index_partner_view_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D46BB212D033000531C29 /* index_partner_view_bg@2x.png */; };
+		410D46C1212D049300531C29 /* CYListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46BF212D049300531C29 /* CYListViewController.m */; };
+		410D46C2212D049300531C29 /* CYListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46C0212D049300531C29 /* CYListViewController.xib */; };
+		410D46C6212D07BE00531C29 /* CYTextIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46C4212D07BE00531C29 /* CYTextIndexCell.m */; };
+		410D46C7212D07BE00531C29 /* CYTextIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46C5212D07BE00531C29 /* CYTextIndexCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,12 @@
 		410D46B1212BFD9D00531C29 /* CYCustomSectionIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYCustomSectionIndexCell.xib; sourceTree = "<group>"; };
 		410D46BA212D033000531C29 /* index_partner_view_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_partner_view_bg@3x.png"; sourceTree = "<group>"; };
 		410D46BB212D033000531C29 /* index_partner_view_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_partner_view_bg@2x.png"; sourceTree = "<group>"; };
+		410D46BE212D049300531C29 /* CYListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYListViewController.h; sourceTree = "<group>"; };
+		410D46BF212D049300531C29 /* CYListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYListViewController.m; sourceTree = "<group>"; };
+		410D46C0212D049300531C29 /* CYListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYListViewController.xib; sourceTree = "<group>"; };
+		410D46C3212D07BE00531C29 /* CYTextIndexCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYTextIndexCell.h; sourceTree = "<group>"; };
+		410D46C4212D07BE00531C29 /* CYTextIndexCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYTextIndexCell.m; sourceTree = "<group>"; };
+		410D46C5212D07BE00531C29 /* CYTextIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYTextIndexCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,12 @@
 				410D4681212BE40800531C29 /* LaunchScreen.storyboard */,
 				410D4684212BE40800531C29 /* Info.plist */,
 				410D4685212BE40900531C29 /* main.m */,
+				410D46BE212D049300531C29 /* CYListViewController.h */,
+				410D46BF212D049300531C29 /* CYListViewController.m */,
+				410D46C0212D049300531C29 /* CYListViewController.xib */,
+				410D46C3212D07BE00531C29 /* CYTextIndexCell.h */,
+				410D46C4212D07BE00531C29 /* CYTextIndexCell.m */,
+				410D46C5212D07BE00531C29 /* CYTextIndexCell.xib */,
 			);
 			path = TableViewIndexProject;
 			sourceTree = "<group>";
@@ -288,6 +304,8 @@
 				410D46B3212BFD9D00531C29 /* CYCustomSectionIndexCell.xib in Resources */,
 				410D4680212BE40800531C29 /* Assets.xcassets in Resources */,
 				410D46BC212D033000531C29 /* index_partner_view_bg@3x.png in Resources */,
+				410D46C7212D07BE00531C29 /* CYTextIndexCell.xib in Resources */,
+				410D46C2212D049300531C29 /* CYListViewController.xib in Resources */,
 				410D467E212BE40500531C29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410D46C1212D049300531C29 /* CYListViewController.m in Sources */,
 				410D467B212BE40500531C29 /* ViewController.m in Sources */,
 				410D46B2212BFD9D00531C29 /* CYCustomSectionIndexCell.m in Sources */,
 				410D4686212BE40900531C29 /* main.m in Sources */,
 				410D4678212BE40500531C29 /* AppDelegate.m in Sources */,
+				410D46C6212D07BE00531C29 /* CYTextIndexCell.m in Sources */,
 				410D46AE212BEC2200531C29 /* CYSectionIndexViewCell.m in Sources */,
 				410D46AB212BE62900531C29 /* CYSectionIndexView.m in Sources */,
 			);
