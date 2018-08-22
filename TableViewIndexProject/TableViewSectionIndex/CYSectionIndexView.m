@@ -91,6 +91,16 @@
      return [self.sectionIndexTableView dequeueReusableCellWithIdentifier:identifier];
 }
 #pragma mark- private
+//获取每个索引的高度
+-(CGFloat)sectionIndexItemHeightByItems:(NSInteger)itemNum{
+     CGFloat h = self.bounds.size.height;
+     //默认20
+     CGFloat sectionIndexItemH = 20;
+     if (sectionIndexItemH * itemNum > h) {
+          sectionIndexItemH = h / itemNum;
+     }
+     return sectionIndexItemH;
+}
 //加载
 -(void)reloadItems{
      [self setupData];
@@ -101,18 +111,18 @@
      }
      CGFloat h = self.bounds.size.height;
      CGFloat w = self.bounds.size.width;
-     CGFloat averageH = h / numberOfItems ;
-     CGFloat sectionIndexH = averageH * numberOfItems;
+     CGFloat sectionIndexItemH = [self sectionIndexItemHeightByItems:numberOfItems];
+     CGFloat sectionIndexH = sectionIndexItemH * numberOfItems;
      self.sectionIndexTableView.frame = CGRectMake(0, 0, w, sectionIndexH);
      self.sectionIndexTableView.center = CGPointMake(w * 0.5, h * 0.5);
-     self.sectionIndexTableView.rowHeight = averageH;
+     self.sectionIndexTableView.rowHeight = sectionIndexItemH;
      self.numberItems = numberOfItems;
      [self.sectionIndexTableView reloadData];
 }
 - (void)selectItemViewForSection:(NSInteger)section andCellRect:(CGRect)cellRect{
      [self uploadSectionIndexStatusWithCurrentIndex:self.selectIndex];
      if (self.isShowCallout) {
-          CGFloat centerY = cellRect.origin.y + cellRect.size.height * 0.5 + self.frame.origin.y;
+          CGFloat centerY = cellRect.origin.y + cellRect.size.height * 0.5 + self.frame.origin.y + self.sectionIndexTableView.frame.origin.y;
           CGFloat centerX = 0;
           CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
           CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
@@ -232,8 +242,6 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
      CYSectionIndexViewCell * cell = [self dequeueSectionIndexCellWithReuseIdentifier:identifierCYSectionIndexViewCell];
-     CGFloat h = self.bounds.size.height;
-     CGFloat averageH = h / self.numberItems;
      if (self.calloutType == CYCalloutViewTypeForUserDefined && self.dataSource && [self.dataSource respondsToSelector:@selector(sectionIndexView:itemViewForSection:)]) {
           cell = [self.dataSource sectionIndexView:self itemViewForSection:indexPath.row];
      }else if (self.calloutType == CYCalloutViewTypeForWeChat) {
@@ -242,7 +250,8 @@
           if (self.dataSource && [self.dataSource respondsToSelector:@selector(sectionIndexView:titleForSection:)]) {
                NSString * text = [self.dataSource sectionIndexView:self titleForSection:indexPath.row];
                customCell.sectionLabel.text = text ? text : @"";
-               customCell.sectionLabel.layer.cornerRadius = averageH * 0.5;
+               CGFloat sectionIndexItemH = [self sectionIndexItemHeightByItems:self.numberItems];
+               customCell.sectionLabel.layer.cornerRadius = sectionIndexItemH * 0.5;
                customCell.sectionLabel.layer.masksToBounds = YES;
           }
           cell = customCell;
@@ -264,7 +273,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
      UITouch *touch = [touches anyObject];
-     CGPoint touchPoint = [touch locationInView:self];
+     CGPoint touchPoint = [touch locationInView:self.sectionIndexTableView];
      self.isTouch = YES;
      for (CYSectionIndexViewCell *cell in self.sectionIndexTableView.visibleCells) {
           if (CGRectContainsPoint(cell.frame, touchPoint)) {
@@ -283,7 +292,7 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
      UITouch *touch = [touches anyObject];
-     CGPoint touchPoint = [touch locationInView:self];
+     CGPoint touchPoint = [touch locationInView:self.sectionIndexTableView];
      for (CYSectionIndexViewCell *cell in self.sectionIndexTableView.visibleCells) {
           if (CGRectContainsPoint(cell.frame, touchPoint)) {
                if (cell.section != self.selectIndex) {
