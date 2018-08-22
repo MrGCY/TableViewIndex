@@ -11,7 +11,7 @@
 #define identifierCYTextIndexCell @"CYTextIndexCell"
 #define kSectionIndexWidth 40.f
 #define kSectionIndexHeight 400.f
-@interface CYListViewController ()<UITableViewDataSource,UITableViewDelegate,CYSectionIndexViewDelegate,CYSectionIndexViewDataSource>
+@interface CYListViewController ()<UITableViewDataSource,UITableViewDelegate,CYSectionIndexViewDelegate,CYSectionIndexViewDataSource,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (retain, nonatomic) NSMutableArray *sections;
 @property (retain, nonatomic) NSMutableDictionary *sectionDic;
@@ -62,7 +62,6 @@
 {
      [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 - (void)createData
 {
      self.sectionDic = [NSMutableDictionary dictionary];
@@ -166,5 +165,22 @@
 -(void)sectionIndexView:(CYSectionIndexView *)sectionIndexView didSelectSection:(NSInteger)section{
      [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
-
+#pragma mark-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+     if (scrollView == self.tableView) {
+          NSArray <UITableViewCell *> *cellArray = [self.tableView  visibleCells];
+          //cell的section的最小值
+          long cellSectionMINCount = LONG_MAX;
+          for (int i = 0; i < cellArray.count; i++) {
+               UITableViewCell *cell = cellArray[i];
+               long cellSection = [self.tableView indexPathForCell:cell].section;
+               if (cellSection < cellSectionMINCount) {
+                    cellSectionMINCount = cellSection;
+               }
+          }
+          if (!self.sectionIndexView.isTouch) {
+               [self.sectionIndexView uploadSectionIndexStatusWithCurrentIndex:cellSectionMINCount];
+          }
+     }
+}
 @end

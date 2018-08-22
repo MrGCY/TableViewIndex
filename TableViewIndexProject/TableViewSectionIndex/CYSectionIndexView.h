@@ -45,6 +45,8 @@ typedef NS_ENUM(NSInteger,CYCalloutViewType) {
 @property (nonatomic, weak) id<CYSectionIndexViewDataSource>dataSource;
 @property (nonatomic, weak) id<CYSectionIndexViewDelegate>delegate;
 @property (nonatomic, assign) CYCalloutViewType  calloutType;
+//是否点击索引
+@property (nonatomic, assign,readonly) BOOL  isTouch;
 //选中提示图与CYSectionIndexView的对象边缘的距离
 @property (nonatomic, assign) CGFloat calloutMargin;
 //存储所有的视图的容器

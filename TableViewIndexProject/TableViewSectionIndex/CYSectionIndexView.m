@@ -25,6 +25,7 @@
 
 @property (nonatomic, strong) UILabel * tipLabel;
 @property (nonatomic, assign) NSInteger  lastIndex;
+@property (nonatomic, assign,readwrite) BOOL  isTouch;
 @end
 
 @implementation CYSectionIndexView
@@ -46,6 +47,7 @@
      self.lastIndex = -1;
 }
 -(void)setupSubViews{
+     self.isTouch = NO;
      self.isShowCallout = YES;
      self.sectionIndexTableView = [[UITableView alloc] init];
      self.sectionIndexTableView.backgroundColor = [UIColor clearColor];
@@ -181,6 +183,7 @@
      }
 }
 -(void)hidenCalloutView{
+     self.isTouch = NO;
      if (self.isShowCallout) {
           [UIView animateWithDuration:0.2 animations:^{
                self.calloutView.alpha = 0.0;
@@ -197,10 +200,11 @@
 }
 //更新当前状态
 -(void)uploadSectionIndexStatusWithCurrentIndex:(NSInteger)currentIndex{
-     if (currentIndex == self.lastIndex) {
+     if (currentIndex == self.lastIndex || self.itemViewList.count == 0 || self.itemViewList.count < currentIndex) {
           return;
      }
      if (self.calloutType == CYCalloutViewTypeForWeChat) {
+          
           CYCustomSectionIndexCell * currentCell = (CYCustomSectionIndexCell *)self.itemViewList[currentIndex];
           CYCustomSectionIndexCell * lastCell = [CYCustomSectionIndexCell new];
           if (self.lastIndex >= 0) {
@@ -261,7 +265,7 @@
 {
      UITouch *touch = [touches anyObject];
      CGPoint touchPoint = [touch locationInView:self];
-     
+     self.isTouch = YES;
      for (CYSectionIndexViewCell *cell in self.sectionIndexTableView.visibleCells) {
           if (CGRectContainsPoint(cell.frame, touchPoint)) {
                if (cell.section != self.selectIndex) {
