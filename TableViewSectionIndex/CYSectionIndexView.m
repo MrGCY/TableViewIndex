@@ -58,7 +58,10 @@
      self.sectionIndexTableView.bounces = NO;
      self.sectionIndexTableView.userInteractionEnabled = NO;
      [self addSubview: self.sectionIndexTableView];
-     [self registerNib:[UINib nibWithNibName:identifierCYCustomSectionIndexCell bundle:nil] forSectionIndexCellReuseIdentifier:identifierCYCustomSectionIndexCell];
+
+     NSString *bundlePath = [[NSBundle mainBundle]pathForResource:@"TableViewSectionIndex"ofType:@"bundle"];
+     NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
+     [self registerNib:[UINib nibWithNibName:identifierCYCustomSectionIndexCell bundle:resourceBundle] forSectionIndexCellReuseIdentifier:identifierCYCustomSectionIndexCell];
      [self registerClass:[CYSectionIndexViewCell class] forSectionIndexCellReuseIdentifier:identifierCYSectionIndexViewCell];
 }
 #pragma mark- setter
@@ -138,7 +141,9 @@
                //微信模式
                if (!self.calloutView) {
                     self.calloutView = [[UIView alloc] init];
-                    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"index_partner_view_bg"]];
+                    NSString *bundlePath = [[NSBundle mainBundle]pathForResource:@"TableViewSectionIndex"ofType:@"bundle"];
+                    NSString *imgPath= [bundlePath stringByAppendingPathComponent:@"index_partner_view_bg"];
+                    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:imgPath]];
                     [imageView sizeToFit];
                     [self.calloutView addSubview:imageView];
                     self.calloutView.frame = CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height);

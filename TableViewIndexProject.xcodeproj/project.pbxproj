@@ -15,16 +15,14 @@
 		410D4686212BE40900531C29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D4685212BE40900531C29 /* main.m */; };
 		410D4690212BE40900531C29 /* TableViewIndexProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D468F212BE40900531C29 /* TableViewIndexProjectTests.m */; };
 		410D469B212BE40900531C29 /* TableViewIndexProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D469A212BE40900531C29 /* TableViewIndexProjectUITests.m */; };
-		410D46AB212BE62900531C29 /* CYSectionIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46AA212BE62900531C29 /* CYSectionIndexView.m */; };
-		410D46AE212BEC2200531C29 /* CYSectionIndexViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46AD212BEC2200531C29 /* CYSectionIndexViewCell.m */; };
-		410D46B2212BFD9D00531C29 /* CYCustomSectionIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46B0212BFD9D00531C29 /* CYCustomSectionIndexCell.m */; };
-		410D46B3212BFD9D00531C29 /* CYCustomSectionIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46B1212BFD9D00531C29 /* CYCustomSectionIndexCell.xib */; };
-		410D46BC212D033000531C29 /* index_partner_view_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D46BA212D033000531C29 /* index_partner_view_bg@3x.png */; };
-		410D46BD212D033000531C29 /* index_partner_view_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D46BB212D033000531C29 /* index_partner_view_bg@2x.png */; };
 		410D46C1212D049300531C29 /* CYListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46BF212D049300531C29 /* CYListViewController.m */; };
 		410D46C2212D049300531C29 /* CYListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46C0212D049300531C29 /* CYListViewController.xib */; };
 		410D46C6212D07BE00531C29 /* CYTextIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D46C4212D07BE00531C29 /* CYTextIndexCell.m */; };
 		410D46C7212D07BE00531C29 /* CYTextIndexCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410D46C5212D07BE00531C29 /* CYTextIndexCell.xib */; };
+		41CB300C21410A1400DAD6CA /* CYSectionIndexViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CB300421410A1400DAD6CA /* CYSectionIndexViewCell.m */; };
+		41CB300D21410A1400DAD6CA /* CYSectionIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CB300521410A1400DAD6CA /* CYSectionIndexView.m */; };
+		41CB300E21410A1400DAD6CA /* TableViewSectionIndex.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 41CB300721410A1400DAD6CA /* TableViewSectionIndex.bundle */; };
+		41CB300F21410A1400DAD6CA /* CYCustomSectionIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CB300A21410A1400DAD6CA /* CYCustomSectionIndexCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,21 +59,19 @@
 		410D4696212BE40900531C29 /* TableViewIndexProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewIndexProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		410D469A212BE40900531C29 /* TableViewIndexProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewIndexProjectUITests.m; sourceTree = "<group>"; };
 		410D469C212BE40900531C29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		410D46A9212BE62900531C29 /* CYSectionIndexView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYSectionIndexView.h; sourceTree = "<group>"; };
-		410D46AA212BE62900531C29 /* CYSectionIndexView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSectionIndexView.m; sourceTree = "<group>"; };
-		410D46AC212BEC2200531C29 /* CYSectionIndexViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYSectionIndexViewCell.h; sourceTree = "<group>"; };
-		410D46AD212BEC2200531C29 /* CYSectionIndexViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYSectionIndexViewCell.m; sourceTree = "<group>"; };
-		410D46AF212BFD9D00531C29 /* CYCustomSectionIndexCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCustomSectionIndexCell.h; sourceTree = "<group>"; };
-		410D46B0212BFD9D00531C29 /* CYCustomSectionIndexCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYCustomSectionIndexCell.m; sourceTree = "<group>"; };
-		410D46B1212BFD9D00531C29 /* CYCustomSectionIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYCustomSectionIndexCell.xib; sourceTree = "<group>"; };
-		410D46BA212D033000531C29 /* index_partner_view_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_partner_view_bg@3x.png"; sourceTree = "<group>"; };
-		410D46BB212D033000531C29 /* index_partner_view_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "index_partner_view_bg@2x.png"; sourceTree = "<group>"; };
 		410D46BE212D049300531C29 /* CYListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYListViewController.h; sourceTree = "<group>"; };
 		410D46BF212D049300531C29 /* CYListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYListViewController.m; sourceTree = "<group>"; };
 		410D46C0212D049300531C29 /* CYListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYListViewController.xib; sourceTree = "<group>"; };
 		410D46C3212D07BE00531C29 /* CYTextIndexCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYTextIndexCell.h; sourceTree = "<group>"; };
 		410D46C4212D07BE00531C29 /* CYTextIndexCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYTextIndexCell.m; sourceTree = "<group>"; };
 		410D46C5212D07BE00531C29 /* CYTextIndexCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYTextIndexCell.xib; sourceTree = "<group>"; };
+		41CB300321410A1400DAD6CA /* CYSectionIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSectionIndexView.h; sourceTree = "<group>"; };
+		41CB300421410A1400DAD6CA /* CYSectionIndexViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSectionIndexViewCell.m; sourceTree = "<group>"; };
+		41CB300521410A1400DAD6CA /* CYSectionIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYSectionIndexView.m; sourceTree = "<group>"; };
+		41CB300721410A1400DAD6CA /* TableViewSectionIndex.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TableViewSectionIndex.bundle; sourceTree = "<group>"; };
+		41CB300921410A1400DAD6CA /* CYCustomSectionIndexCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYCustomSectionIndexCell.h; sourceTree = "<group>"; };
+		41CB300A21410A1400DAD6CA /* CYCustomSectionIndexCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYCustomSectionIndexCell.m; sourceTree = "<group>"; };
+		41CB300B21410A1400DAD6CA /* CYSectionIndexViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYSectionIndexViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +122,7 @@
 		410D4675212BE40500531C29 /* TableViewIndexProject */ = {
 			isa = PBXGroup;
 			children = (
-				410D46A8212BE5F300531C29 /* TableViewSectionIndex */,
+				41CB300221410A1400DAD6CA /* TableViewSectionIndex */,
 				410D4676212BE40500531C29 /* AppDelegate.h */,
 				410D4677212BE40500531C29 /* AppDelegate.m */,
 				410D4679212BE40500531C29 /* ViewController.h */,
@@ -164,34 +160,32 @@
 			path = TableViewIndexProjectUITests;
 			sourceTree = "<group>";
 		};
-		410D46A8212BE5F300531C29 /* TableViewSectionIndex */ = {
+		41CB300221410A1400DAD6CA /* TableViewSectionIndex */ = {
 			isa = PBXGroup;
 			children = (
-				410D46B9212D02E600531C29 /* Custom */,
-				410D46B4212D02D300531C29 /* Resource */,
-				410D46A9212BE62900531C29 /* CYSectionIndexView.h */,
-				410D46AA212BE62900531C29 /* CYSectionIndexView.m */,
-				410D46AC212BEC2200531C29 /* CYSectionIndexViewCell.h */,
-				410D46AD212BEC2200531C29 /* CYSectionIndexViewCell.m */,
+				41CB300821410A1400DAD6CA /* Custom */,
+				41CB300321410A1400DAD6CA /* CYSectionIndexView.h */,
+				41CB300521410A1400DAD6CA /* CYSectionIndexView.m */,
+				41CB300B21410A1400DAD6CA /* CYSectionIndexViewCell.h */,
+				41CB300421410A1400DAD6CA /* CYSectionIndexViewCell.m */,
+				41CB300621410A1400DAD6CA /* Resource */,
 			);
 			path = TableViewSectionIndex;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
-		410D46B4212D02D300531C29 /* Resource */ = {
+		41CB300621410A1400DAD6CA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				410D46BB212D033000531C29 /* index_partner_view_bg@2x.png */,
-				410D46BA212D033000531C29 /* index_partner_view_bg@3x.png */,
+				41CB300721410A1400DAD6CA /* TableViewSectionIndex.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		410D46B9212D02E600531C29 /* Custom */ = {
+		41CB300821410A1400DAD6CA /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				410D46AF212BFD9D00531C29 /* CYCustomSectionIndexCell.h */,
-				410D46B0212BFD9D00531C29 /* CYCustomSectionIndexCell.m */,
-				410D46B1212BFD9D00531C29 /* CYCustomSectionIndexCell.xib */,
+				41CB300921410A1400DAD6CA /* CYCustomSectionIndexCell.h */,
+				41CB300A21410A1400DAD6CA /* CYCustomSectionIndexCell.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -299,13 +293,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				410D46BD212D033000531C29 /* index_partner_view_bg@2x.png in Resources */,
 				410D4683212BE40800531C29 /* LaunchScreen.storyboard in Resources */,
-				410D46B3212BFD9D00531C29 /* CYCustomSectionIndexCell.xib in Resources */,
 				410D4680212BE40800531C29 /* Assets.xcassets in Resources */,
-				410D46BC212D033000531C29 /* index_partner_view_bg@3x.png in Resources */,
 				410D46C7212D07BE00531C29 /* CYTextIndexCell.xib in Resources */,
 				410D46C2212D049300531C29 /* CYListViewController.xib in Resources */,
+				41CB300E21410A1400DAD6CA /* TableViewSectionIndex.bundle in Resources */,
 				410D467E212BE40500531C29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,13 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				410D46C1212D049300531C29 /* CYListViewController.m in Sources */,
+				41CB300F21410A1400DAD6CA /* CYCustomSectionIndexCell.m in Sources */,
 				410D467B212BE40500531C29 /* ViewController.m in Sources */,
-				410D46B2212BFD9D00531C29 /* CYCustomSectionIndexCell.m in Sources */,
+				41CB300D21410A1400DAD6CA /* CYSectionIndexView.m in Sources */,
 				410D4686212BE40900531C29 /* main.m in Sources */,
 				410D4678212BE40500531C29 /* AppDelegate.m in Sources */,
 				410D46C6212D07BE00531C29 /* CYTextIndexCell.m in Sources */,
-				410D46AE212BEC2200531C29 /* CYSectionIndexViewCell.m in Sources */,
-				410D46AB212BE62900531C29 /* CYSectionIndexView.m in Sources */,
+				41CB300C21410A1400DAD6CA /* CYSectionIndexViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
